@@ -1,4 +1,5 @@
 #pragma once
+#include"stdbool.h"
 
 #ifndef _FUNCTIONS_H_
 #define _FUNCTIONS_H_
@@ -10,10 +11,6 @@
 */
 unsigned int Number1(unsigned const value_);
 
-#endif //!_FUNCTIONS_H_
-
-#ifndef _FUNCTIONS_H_
-#define _FUNCTIONS_H_
 
 /*
 @brief Вычисляет вторую цифру числа.
@@ -22,10 +19,6 @@ unsigned int Number1(unsigned const value_);
 */
 unsigned int Number2(unsigned const value_);
 
-#endif //!_FUNCTIONS_H_
-
-#ifndef _FUNCTIONS_H_
-#define _FUNCTIONS_H_
 
 /*
 @brief Вычисляет третью цифру числа.
@@ -34,10 +27,6 @@ unsigned int Number2(unsigned const value_);
 */
 unsigned int Number3(unsigned const value_);
 
-#endif //!_FUNCTIONS_H_
-
-#ifndef _FUNCTIONS_H_
-#define _FUNCTIONS_H_
 
 /*
 @brief Вычисляет четвёртую цифру числа.
@@ -46,22 +35,13 @@ unsigned int Number3(unsigned const value_);
 */
 unsigned int Number4(unsigned const value_);
 
-#endif //!_FUNCTIONS_H_
-
-#ifndef _FUNCTIONS_H_
-#define _FUNCTIONS_H_
 
 /*
-@brief Вычисляет четвёртую цифру числа.
-@param value_ : Число.
-@return Четвёртая цифра числа.
+@brief Генерирует случайное четырёхзначное число
+@return Сгенерированное случайное четырёхзначное число.
 */
-unsigned int Number4(unsigned const value_);
+int RandomNumber();
 
-#endif //!_FUNCTIONS_H_
-
-#ifndef _FUNCTIONS_H_
-#define _FUNCTIONS_H_
 
 /*
 @brief Вычисляет кол-во совпавших чисел на одинаковых позициях.
@@ -71,10 +51,6 @@ unsigned int Number4(unsigned const value_);
 */
 unsigned int NumberOfBulls(unsigned const value1_, unsigned const value2_);
 
-#endif //!_FUNCTIONS_H_
-
-#ifndef _FUNCTIONS_H_
-#define _FUNCTIONS_H_
 
 /*
 @brief Вычисляет кол-во совпавших чисел не на разных позициях.
@@ -84,29 +60,11 @@ unsigned int NumberOfBulls(unsigned const value1_, unsigned const value2_);
 */
 unsigned int NumberOfCows(unsigned const value1_, unsigned const value2_);
 
-#endif //!_FUNCTIONS_H_
-
-#ifndef _FUNCTIONS_H_
-#define _FUNCTIONS_H_
-
-/*
-@brief Определяет истинность совпавших чисел.
-@param value1_ : Первое число.
-@param value2_ : Второе число.
-@return Истинность совпавших чисел.
-*/
-bool TrueBulls(unsigned const value1_, unsigned const value2_);
-
-#endif //!_FUNCTIONS_H_
-
-#ifndef _FUNCTIONS_H_
-#define _FUNCTIONS_H_
-
 /*
 @brief Определяет совпадения цифр числа.
 @param value_ : Число.
 @return Совпадают ли цифры числа.
 */
-bool RepeatingNumbers(unsigned const value_);
+bool NotRepeatingNumbers(unsigned const value_);
 
 #endif //!_FUNCTIONS_H_

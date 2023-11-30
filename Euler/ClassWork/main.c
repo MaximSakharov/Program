@@ -71,7 +71,11 @@
 //Проблема 5
 int main()
 {
-    printf("%llu\n", Problem_5());
+   int divider = 0;
+   printf("Last divider = ");
+   scanf_s("%d", &divider);
 
-    return 0;
+   printf("%llu\n", Problem_5(divider));
+
+   return 0;
 }

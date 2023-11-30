@@ -1,7 +1,3 @@
 ﻿  Bulls and Cows.c
-C:\Users\User\source\repos\БыкиИКоровы\БыкиИКоровы\Bulls and Cows.c(15,14): warning C4013: 'RepeatingNumbers' undefined; assuming extern returning int
-C:\Users\User\source\repos\БыкиИКоровы\БыкиИКоровы\Bulls and Cows.c(20,10): warning C4013: 'system' undefined; assuming extern returning int
-C:\Users\User\source\repos\БыкиИКоровы\БыкиИКоровы\Bulls and Cows.c(39,11): warning C4013: 'TrueBulls' undefined; assuming extern returning int
-C:\Users\User\source\repos\БыкиИКоровы\БыкиИКоровы\Bulls and Cows.c(53,52): warning C4013: 'NumberOfBulls' undefined; assuming extern returning int
-C:\Users\User\source\repos\БыкиИКоровы\БыкиИКоровы\Bulls and Cows.c(53,85): warning C4013: 'NumberOfCows' undefined; assuming extern returning int
-  БыкиИКоровы.vcxproj -> C:\Users\User\source\repos\БыкиИКоровы\x64\Debug\БыкиИКоровы.exe
+C:\Users\User\Desktop\Programs-main\БыкиИКоровы\БыкиИКоровы\Bulls and Cows.c(12,4): warning C4013: 'srand' undefined; assuming extern returning int
+  БыкиИКоровы.vcxproj -> C:\Users\User\Desktop\Programs-main\БыкиИКоровы\x64\Debug\БыкиИКоровы.exe

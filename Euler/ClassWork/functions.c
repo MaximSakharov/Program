@@ -9,11 +9,16 @@ unsigned long long Square(const long long value_)
 
 bool Is_Prime(unsigned const long long value_)
 {
-	if (value_ % 2 == 0 && value_!=2)
+	if (value_ <= 1)
 		return false;
 
+	if (value_ == 2)
+		return true;
 
-	for (unsigned int n = 3; n < sqrt(value_) + 1; n += 2)
+	if (value_ % 2 == 0)
+		return false;
+
+	for (unsigned long long n = 3; n <= sqrt(value_); n += 2)
 	{
 		if (value_ % n == 0)
 			return false;
@@ -42,17 +47,18 @@ bool isPalindrom(const long long value_)
 }
 
 
-bool isDivision1to20(const long long value_)
+bool isDivisionTo(const long long value_, const int divider_)
 {
 	long long number = value_;
+	int div = divider_;
 	int flag = 0;
 
-	for (int i = 1; i <= 20; i++)
+	for (int i = 1; i <= div; i++)
 	{
 		if (number % i == 0)
 			flag++;
 	}
-	if (flag == 20)
+	if (flag == div)
 		return true;
 	else
 		return false;

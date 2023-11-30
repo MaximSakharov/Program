@@ -32,7 +32,8 @@ unsigned long long Problem_3(long long number_);
 unsigned long long Problem_4();
 
 /*
-@brief Ќайти самое маленькое число, которое делитс€ нацело на все числа от 1 до 20
-@return —амое маленькое число, которое делитс€ нацело на все числа от 1 до 20
+@brief Ќайти самое маленькое число, которое делитс€ нацело на все числа от 1 до введЄнного делител€
+@param divider_: делитель числа
+@return —амое маленькое число, которое делитс€ нацело на все числа от 1 до введЄнного делител€
 */
-unsigned long long Problem_5();
+unsigned long long Problem_5(const unsigned int divider_);

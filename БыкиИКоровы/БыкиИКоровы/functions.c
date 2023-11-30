@@ -1,6 +1,8 @@
 #include"functions.h"
 #include"stdbool.h"
 #include "math.h"
+#include <stdlib.h>
+#include <time.h>
 
 unsigned int Number1(unsigned const value_)
 {
@@ -36,6 +38,11 @@ unsigned int Number4(unsigned const value_)
    int b = a % 10;
 
    return b;
+}
+
+int RandomNumber() 
+{
+    return (1000 + rand() % 9000);
 }
 
 unsigned int NumberOfBulls(const unsigned value1_, const unsigned value2_)
@@ -76,36 +83,14 @@ unsigned int NumberOfCows(const unsigned value1_, const unsigned value2_)
    return c;
 }
 
-bool TrueBulls(unsigned const value1_, unsigned const value2_)
-{
-   int number1 = value1_;
-   int number2 = value2_;
 
-   if (Number1(number1) == Number1(number2) && Number2(number1) == Number2(number2) &&
-      Number3(number1) == Number3(number2) && Number4(number1) == Number4(number2))
-      return true;
-   else
-      return false;
-}
-
-bool RepeatingNumbers(unsigned const value_)
+bool NotRepeatingNumbers(unsigned const value_)
 {
    int number = value_;
 
-   if (Number1(number) == Number2(number) || Number1(number) == Number3(number) || Number1(number) == Number4(number))
+   if (Number1(number) == Number2(number) || Number1(number) == Number3(number) || Number1(number) == Number4(number) || \
+       Number2(number) == Number3(number) || Number2(number) == Number4(number) || Number3(number) == Number4(number))
       return false;
    else true;
    
-   if (Number2(number) == Number1(number) || Number2(number) == Number3(number) || Number2(number) == Number4(number))
-      return false;
-   else true;
-   
-   if (Number3(number) == Number1(number) || Number3(number) == Number2(number) || Number3(number) == Number4(number))
-      return false;
-   else true;
-   
-   if (Number4(number) == Number1(number) || Number4(number) == Number2(number) || Number4(number) == Number3(number))
-      return false;
-   else true;
-
 }

@@ -46,12 +46,12 @@ unsigned long long Problem_2(const unsigned int number_)
 
 unsigned long long Problem_3(long long number_)
 {
-   unsigned long long number = number_;
-   unsigned long long n = 2;
+   long long number = number_;
+   long long n = 2;
 
-   while (number % 2 == 0)
-      number /= 2;
-
+   while (number % n == 0 && number!=2)
+      number /= n;
+  
    n++;
 
    while (n < number)
@@ -89,16 +89,17 @@ unsigned long long Problem_4()
    return productfin;
 }
 
-unsigned long long Problem_5()
+unsigned long long Problem_5(const unsigned int divider_)
 {
-   long long number = 20;
+   int div = divider_;
+   long long number = div;
    long long maxnumber = 0;
 
 
-   while (isDivision1to20(number) == false)
-      number+=20;
+   while (isDivisionTo(number, div) == false)
+      number+=div;
 
-   if (isDivision1to20(number) == true)
+   if (isDivisionTo(number, div) == true)
       maxnumber = number;
    
    return maxnumber;

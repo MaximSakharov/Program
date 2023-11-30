@@ -53,10 +53,11 @@ unsigned long long Reverse(const long long value_);
 #define _FUNCTIONS_H_
 
 /*
-@brief Проверает деление нацело то 1 до 20
-@param value_: Число
-@return Делится ли на число от 1 до 20
+@brief Проверает деление нацело от 1 до введённого делителя
+@param value_: Делимое число
+@param divider_: Последнее число, на которое делится делимое
+@return Делится ли на число от 1 до введённого делителя
 */
-unsigned long long isDivision1to20(const long long value_);
+unsigned long long isDivisionTo(const long long value_, const int divider_);
 
 #endif //!_FUNCTIONS_H_
