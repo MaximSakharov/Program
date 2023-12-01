@@ -14,8 +14,6 @@ void BullsAndCows()
    int SecretNumber = RandomNumber();
 
    for (; NotRepeatingNumbers(SecretNumber) == false; SecretNumber = RandomNumber());
-   
-   printf("%d \n", SecretNumber);
 
    int PlayerNumber = 0;
 
@@ -24,8 +22,8 @@ void BullsAndCows()
       printf("”гадайте загаданное четырЄхзначное число (числа не должны повтор€тьс€!) = ");
       scanf_s("%d", &PlayerNumber);
 
-      if (NotRepeatingNumbers(PlayerNumber)==false || (PlayerNumber < 1000 && Number1(PlayerNumber)==0) || PlayerNumber > 9999)
-         while (NotRepeatingNumbers(PlayerNumber) == false || (PlayerNumber < 1000 && Number1(PlayerNumber) == 0) || PlayerNumber > 9999)
+      if (NotRepeatingNumbers(PlayerNumber)==false || PlayerNumber < 1000 || PlayerNumber > 9999)
+         while (NotRepeatingNumbers(PlayerNumber) == false || PlayerNumber < 1000 || PlayerNumber > 9999)
          {
             printf("”гадайте загаданное четырЄхзначное число (числа не должны повтор€тьс€!) = ");
             scanf_s("%d", &PlayerNumber);
