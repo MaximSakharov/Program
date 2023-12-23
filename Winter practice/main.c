@@ -2,41 +2,49 @@
 #include <stdlib.h>
 #include <math.h>
 #include "functions.h"
-#include "struct.h"
+#include "matrix.h"
 
+int main()
+{
+   int choise;
+   printf("Select what you want to count:\n \
+           1 - Inversed Matrix\n \
+           2 - Use Cramer's method\n");
+   scanf_s("%d", &choise);
 
-int main() {
    int rows, cols;
    printf("Enter the number of rows of the matrix: ");
    scanf_s("%d", &rows);
    printf("Enter the number of colomns of the matrix: ");
    scanf_s("%d", &cols);
 
-   Matrix inputMatrix = createMatrix(rows, cols);
+   Matrix* inputMatrix = CreateMatrix(rows, cols);
 
-   printf("Enter the elements of the matrix:\n");
+   printf("Enter the matrix:\n");
    for (int i = 0, r = 1; i < rows; i++, r++) 
    {
-      printf("Elements of %d row:\n", r);
-      for (int j = 0, c = 1; j < cols; j++, c++) 
+      for (int j = 0; j < cols; j++) 
       {
-         printf("Element %d: ", c);
-         scanf_s("%lf", &inputMatrix.data[i][j]);
+         scanf_s("%f", &inputMatrix->data[i][j]);
       }
    }
 
    printf("Original matrix:\n");
-   printMatrix(inputMatrix);
+   PrintMatrix(inputMatrix);
+   printf("\n");
+   if (choise == 1)
+   {
+      printf("Inversed matrix:\n");
+      Matrix* invMatrix = InverseMatrix(inputMatrix);
 
-   //Обратная Матрица
-   Matrix invMatrix = inverseMatrix(inputMatrix);
+      PrintMatrix(invMatrix);
+   }
+   if (choise == 2)
+      Kramer(inputMatrix);
+   else
+      return 1;
 
-   printMatrix(invMatrix);
-
-   //Вычисление СЛУ по методу Крамера
-   //Kramer(inputMatrix);
-
-   freeMatrix(inputMatrix);
+   FreeMatrix(inputMatrix);
 
    return 0;
 }

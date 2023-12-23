@@ -1,7 +1,7 @@
 #pragma once
 
-typedef struct Matrix{
+typedef struct Matrix {
    int rows;
    int cols;
-   double** data;
+   float** data;
 } Matrix;
