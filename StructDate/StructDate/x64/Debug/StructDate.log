@@ -1,0 +1,2 @@
+﻿  main.c
+C:\Users\mksakharov\source\repos\StructDate\StructDate\main.c(15): error C4700: использована неинициализированная локальная переменная "date1"
